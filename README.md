@@ -14,3 +14,8 @@ cd ../libgcc/soft-fp
 gcc -E -I../ -I../config/i386/ -I../../include -I. addtf3.c > /tmp/add_gen.c
 gcc -E -I../ -I../config/i386/ -I../../include -I. multf3.c > /tmp/mul_gen.c
 ~~~
+
+~~~
+clang-format -style="{BasedOnStyle: llvm, IndentWidth: 4, ColumnLimit: 10000, SortIncludes: false}" add_gen.c > add_gen_clang-format.c
+~~~
+
